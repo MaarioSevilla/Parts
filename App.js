@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import Button from './src/componets/Button';
 import Color from './src/componets/Color';
@@ -18,6 +18,8 @@ function App() {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   title: {
     color: 'red',

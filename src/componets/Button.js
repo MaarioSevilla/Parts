@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import {TouchableOpacity, StyleSheet, Text} from 'react-native';
 
 function Button() {
