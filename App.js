@@ -8,6 +8,7 @@ function App() {
   return (
     <View style={styles.main}>
       <Title text="Mi título" />
+      <Title text="hello" />
       <Text style={styles.title}>Hola mundo</Text>
       <Button />
       <Color />
