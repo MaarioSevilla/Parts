@@ -1,30 +1,50 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {StatusBar,View, StyleSheet, Text, Switch} from 'react-native';
 import Button from './src/componets/Button';
 import Color from './src/componets/Color';
 import Title from './src/componets/Title';
+import TxtInput from './src/componets/TxtInput';
+import Info from './src/componets/Info'
+import Logo from './src/componets/Logo'
+//import { NavigationContainer } from 'react-navigation';
 
 function App() {
   return (
     <View style={styles.main}>
       <Title text="Mi título" />
       <Title text="hello" />
-      <Text style={styles.title}>Hola mundo</Text>
+      <Logo/>
+      <TxtInput/>
+      <Switch />
       <Button />
       <Color />
+      <Info/>
     </View>
   );
 }
 
+// const AppStackNavigator = createStackNavigator({
+//   Login : LoginPage,
+//   Register: RegisterPage,
+//   Home: HomePage
+// });
+
 const styles = StyleSheet.create({
   main: {
+    backgroundColor: '#FFFDF8',
+    paddingTop: 50,
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    //flexDirection: 'row',
+    //alignItems: 'center', // no tiene exactamente el mismo efecto que en css
   },
   title: {
     color: 'red',
   },
+  btn:{
+    backgroundColor: 'blue',
+    
+  }
 });
 
 export default App;
