@@ -1,50 +1,46 @@
-import React from 'react';
-import {StatusBar,View, StyleSheet, Text, Switch} from 'react-native';
-import Button from './src/componets/Button';
-import Color from './src/componets/Color';
-import Title from './src/componets/Title';
-import TxtInput from './src/componets/TxtInput';
-import Info from './src/componets/Info'
-import Logo from './src/componets/Logo'
-//import { NavigationContainer } from 'react-navigation';
+// In App.js in a new project
 
-function App() {
+import * as React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import 'react-native-gesture-handler';
+import ElementsScreen from './src/screens/ElementsScreen';
+
+function HomeScreen(props) {
   return (
-    <View style={styles.main}>
-      <Title text="Mi título" />
-      <Title text="hello" />
-      <Logo/>
-      <TxtInput/>
-      <Switch />
-      <Button />
-      <Color />
-      <Info/>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <TouchableOpacity onPress={()=> props.navigation.navigate('Two') }>
+        <Text>ir a two</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=> props.navigation.navigate('Elements') }>
+        <Text>ir a Elements</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
-// const AppStackNavigator = createStackNavigator({
-//   Login : LoginPage,
-//   Register: RegisterPage,
-//   Home: HomePage
-// });
+function TwoScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Screen Two</Text>
+    </View>
+  );
+}
 
-const styles = StyleSheet.create({
-  main: {
-    backgroundColor: '#FFFDF8',
-    paddingTop: 50,
-    flex: 1,
-    alignItems: 'center',
-    //flexDirection: 'row',
-    //alignItems: 'center', // no tiene exactamente el mismo efecto que en css
-  },
-  title: {
-    color: 'red',
-  },
-  btn:{
-    backgroundColor: 'blue',
-    
-  }
-});
+const Stack = createStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Elements" component={ElementsScreen} />
+        <Stack.Screen name="Two" component={TwoScreen} options={{ headerShown: false }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
 export default App;

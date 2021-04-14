@@ -7,6 +7,7 @@ export default class Home extends Component{
         return(
             <view>
                 <text>Bienvenido</text>
+                <text>,</text>
             </view>
         );
     }
