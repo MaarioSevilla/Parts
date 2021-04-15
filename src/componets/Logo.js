@@ -5,6 +5,7 @@ function Logo() {
   return (
     <Image source={{uri: 'https://reactjs.org/logo-og.png'}}
        style={styles.img} />
+    //<Image source={require('./my-icon.png')} />
   );
 }
 

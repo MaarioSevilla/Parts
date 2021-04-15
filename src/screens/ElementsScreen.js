@@ -1,5 +1,5 @@
 import React from 'react';
-import {StatusBar,View, StyleSheet, Text, Switch} from 'react-native';
+import {View, StyleSheet, Text, Switch} from 'react-native';
 import Button from '../componets/Button';
 import Color from '../componets/Color';
 import Title from '../componets/Title';
