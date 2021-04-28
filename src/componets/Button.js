@@ -1,9 +1,28 @@
 import React from 'react';
-import {TouchableOpacity, StyleSheet, Text} from 'react-native';
+import {TouchableOpacity, StyleSheet, Text, Alert} from 'react-native';
+
 
 function Button() {
+
+  const createTwoButtonAlert = () =>
+    Alert.alert(
+      "Alert Title",
+      "My Alert Msg",
+      [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
+        },
+        { text: "OK", onPress: () => {
+            console.log("OK Pressed")
+          } 
+        }
+      ]
+    );
+
   return (
-    <TouchableOpacity style={styles.main}>
+    <TouchableOpacity style={styles.main} onPress={createTwoButtonAlert}>
       <Text style={styles.title}>Register here</Text>
     </TouchableOpacity>
   );

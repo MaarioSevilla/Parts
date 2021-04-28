@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 function NavigationHome() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Elements" component={ElementsScreen} />
         <Stack.Screen name="Two" component={TwoScreen} options={{ headerShown: false }}/>

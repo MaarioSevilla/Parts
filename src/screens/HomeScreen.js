@@ -1,5 +1,6 @@
 import React from 'react';
-import {Text, View, TouchableOpacity} from 'react-native';
+import {Text, View, TouchableOpacity, StyleSheet} from 'react-native';
+import FAB from '../componets/FAB';
 
 function HomeScreen(props) {
     return (
@@ -11,6 +12,14 @@ function HomeScreen(props) {
         <TouchableOpacity onPress={()=> props.navigation.navigate('Elements') }>
           <Text>ir a Elements</Text>
         </TouchableOpacity>
+        <FAB
+          text="+"
+          fabStyle={{ backgroundColor: "#0066ff" }}
+          textStyle={{ color: "#fff" }}
+          onPress={
+            console.log("funciono")
+          }
+        />
       </View>
     );
 }

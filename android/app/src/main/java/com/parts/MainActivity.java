@@ -1,4 +1,4 @@
-package com.parts;
+package com.sv.parts;
 
 import com.facebook.react.ReactActivity;
 

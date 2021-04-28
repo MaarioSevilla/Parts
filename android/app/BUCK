@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.parts",
+    package = "com.sv.parts",
 )
 
 android_resource(
     name = "res",
-    package = "com.parts",
+    package = "com.sv.parts",
     res = "src/main/res",
 )
 

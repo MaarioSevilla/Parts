@@ -1,12 +1,49 @@
-import React from 'react';
-import 'react-native-gesture-handler';
-import NavigationHome from './src/navigation/NavigationHome';
+import * as React from 'react';
+import * as firebase from 'firebase';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Landing from './src/componets/auth/Landing';
+import Register from './src/componets/auth/Register';
+
+//firebase const
+const firebaseConfig = {
+  apiKey: "AIzaSyDgMwfJijaGzOvDEfDxI1TE_pLs-wrFyN0",
+  authDomain: "social-media-demo-ing.firebaseapp.com",
+  projectId: "social-media-demo-ing",
+  storageBucket: "social-media-demo-ing.appspot.com",
+  messagingSenderId: "916720100041",
+  appId: "1:916720100041:web:dd0eb415ad16361583a318",
+  measurementId: "G-2PV6CSCPK9"
+};
+
+if(firebase.apps.length === 0){
+  firebase.initializeApp(firebaseConfig);
+}
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return(
-    <NavigationHome/>
-  )
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Landing">
+         <Stack.Screen name="Landing" component={Landing} options={{ headerShown: false }}/>
+         <Stack.Screen name="Register" component={Register} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
+
+
+
+// import React from 'react';
+// import 'react-native-gesture-handler';
+// import NavigationHome from './src/navigation/NavigationHome';
+
+// export default function App() {
+//   return(
+//     <NavigationHome/>
+//   )
+// }
 
 // import * as React from 'react';
 // import { View, Text, TouchableOpacity } from 'react-native';
