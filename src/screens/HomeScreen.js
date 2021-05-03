@@ -12,6 +12,9 @@ function HomeScreen(props) {
         <TouchableOpacity onPress={()=> props.navigation.navigate('Elements') }>
           <Text>ir a Elements</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={()=> props.navigation.navigate('Form') }>
+          <Text>ir a Form</Text>
+        </TouchableOpacity>
         <FAB
           text="+"
           fabStyle={{ backgroundColor: "#0066ff" }}

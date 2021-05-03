@@ -5,6 +5,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import ElementsScreen from '../screens/ElementsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import TwoScreen from '../screens/TwoScreen';
+import FormScreen from '../screens/FormScreen';
 
 const Stack = createStackNavigator();
 // const Tab = createMaterialBottomTabNavigator();
@@ -15,6 +16,7 @@ function NavigationHome() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Elements" component={ElementsScreen} />
+        <Stack.Screen name="Form" component={FormScreen} />
         <Stack.Screen name="Two" component={TwoScreen} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
