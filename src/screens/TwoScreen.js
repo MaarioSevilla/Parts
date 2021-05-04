@@ -49,11 +49,20 @@ function TwoScreen() {
             onPress={ope}
             // onPress={() => this.ope('foo')} //con parametros
         />
+        <View style={styles.srow} >
+          <Text>A</Text>
+          <Text>B</Text>
+        </View>
       </View>
     );
 }
 
 const styles = StyleSheet.create({
+    srow:{
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginTop: 10,
+    },
     input: {
       height: 40,
       width: 340,

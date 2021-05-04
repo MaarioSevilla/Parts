@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text, Switch} from 'react-native';
+import {View, StyleSheet, Text, Switch, ScrollView} from 'react-native';
 import Button from '../componets/Button';
 import Color from '../componets/Color';
 import Title from '../componets/Title';
@@ -9,8 +9,8 @@ import Logo from '../componets/Logo';
 
 function Elements() {
   return (
-    <View style={styles.main}>
-        <Text>hola</Text>
+    <ScrollView contentContainerStyle={styles.scr} showsVerticalScrollIndicator={false}>
+      <Text>hola</Text>
       <Title text="Mi título" />
       <Title text="hello" />
       <Logo/>
@@ -19,7 +19,7 @@ function Elements() {
       <Button />
       <Color />
       <Info/>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -30,6 +30,11 @@ function Elements() {
 // });
 
 const styles = StyleSheet.create({
+  scr:{
+    flexGrow: 1, 
+    alignItems: 'center',
+    paddingTop: 10,
+  },
   main: {
     backgroundColor: '#FFFDF8',
     paddingTop: 10,

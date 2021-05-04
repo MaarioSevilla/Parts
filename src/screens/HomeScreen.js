@@ -1,11 +1,13 @@
 import React from 'react';
-import {Text, View, TouchableOpacity, StyleSheet} from 'react-native';
+import {Text, View, TouchableOpacity, StyleSheet, Dimensions, Platform } from 'react-native';
 import FAB from '../componets/FAB';
+
+const {width, height} = Dimensions.get('window');
 
 function HomeScreen(props) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
+        <Text style={styles.tex}>Home Screen</Text>
         <TouchableOpacity onPress={()=> props.navigation.navigate('Two') }>
           <Text>ir a two</Text>
         </TouchableOpacity>
@@ -14,6 +16,9 @@ function HomeScreen(props) {
         </TouchableOpacity>
         <TouchableOpacity onPress={()=> props.navigation.navigate('Form') }>
           <Text>ir a Form</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={()=> props.navigation.navigate('HomeOp') }>
+          <Text>ir a home Op</Text>
         </TouchableOpacity>
         <FAB
           text="+"
@@ -29,13 +34,8 @@ function HomeScreen(props) {
 
 export default HomeScreen;
 
-// export default class HomeScreen extends Component {
-//     render(){
-//         return(
-//             <view>
-//                 <text>Bienvenido</text>
-//                 <text>,</text>
-//             </view>
-//         );
-//     }
-// }
+const styles = StyleSheet.create({
+  tex: {
+    fontSize: width*0.05,
+  },
+});

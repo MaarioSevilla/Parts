@@ -6,6 +6,15 @@ import ElementsScreen from '../screens/ElementsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import TwoScreen from '../screens/TwoScreen';
 import FormScreen from '../screens/FormScreen';
+import HomeOpScreen from '../screens/HomeOpScreen';
+import { TouchableOpacity,Text } from 'react-native';
+
+const getLogo = ({navigation})=> (
+  <TouchableOpacity style={{flexDirection:'row'}}>
+    <Text style={{color: '#fff'}}>Hola</Text>
+    <Text style={{color: '#fff'}}>H★ </Text>
+  </TouchableOpacity>
+);
 
 const Stack = createStackNavigator();
 // const Tab = createMaterialBottomTabNavigator();
@@ -17,6 +26,21 @@ function NavigationHome() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Elements" component={ElementsScreen} />
         <Stack.Screen name="Form" component={FormScreen} />
+        <Stack.Screen name="HomeOp" component={HomeOpScreen} 
+          options={
+            (props)=>({
+              title: '',
+              headerStyle:{
+                backgroundColor: '#263546',
+              },
+              headerTintColor: '#fff',
+              headerTitleStyle:{
+                fontWeight: 'bold',
+              },
+              headerRight: ()=> getLogo(props),
+            })
+          }
+        />
         <Stack.Screen name="Two" component={TwoScreen} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>

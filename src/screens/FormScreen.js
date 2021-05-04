@@ -13,6 +13,18 @@ function FormScreen() {
         },
         onSubmit: values =>{
             alert('hey');
+            // const myurl = 'https://mywebsite.com/endpoint/';
+            // fetch(myurl, {
+            //         method: 'POST',
+            //         headers: {
+            //             Accept: 'application/json',
+            //             'Content-Type': 'application/json'
+            //         },
+            //         body: JSON.stringify({
+            //             firstParam: 'yourValue',
+            //             secondParam: 'yourOtherValue'
+            //         })
+            // });
         },
         validate: values=>{
             const errors={};
