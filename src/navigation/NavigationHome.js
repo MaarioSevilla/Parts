@@ -7,6 +7,7 @@ import HomeScreen from '../screens/HomeScreen';
 import TwoScreen from '../screens/TwoScreen';
 import FormScreen from '../screens/FormScreen';
 import HomeOpScreen from '../screens/HomeOpScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 import { TouchableOpacity,Text } from 'react-native';
 
 const getLogo = ({navigation})=> (
@@ -26,6 +27,7 @@ function NavigationHome() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Elements" component={ElementsScreen} />
         <Stack.Screen name="Form" component={FormScreen} />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="HomeOp" component={HomeOpScreen} 
           options={
             (props)=>({

@@ -20,6 +20,9 @@ function HomeScreen(props) {
         <TouchableOpacity onPress={()=> props.navigation.navigate('HomeOp') }>
           <Text>ir a home Op</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={()=> props.navigation.navigate('Profile') }>
+          <Text>Profile</Text>
+        </TouchableOpacity>
         <FAB
           text="+"
           fabStyle={{ backgroundColor: "#0066ff" }}
