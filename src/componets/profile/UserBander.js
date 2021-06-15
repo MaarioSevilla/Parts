@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent:'center',
         borderColor: 'blue', 
+        marginLeft:17,
     },
     iCone:{
         width: 45,

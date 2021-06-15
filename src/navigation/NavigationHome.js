@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import ElementsScreen from '../screens/ElementsScreen';
 import HomeScreen from '../screens/HomeScreen';
@@ -8,7 +8,9 @@ import TwoScreen from '../screens/TwoScreen';
 import FormScreen from '../screens/FormScreen';
 import HomeOpScreen from '../screens/HomeOpScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-import { TouchableOpacity,Text } from 'react-native';
+import Modals from '../componets/Modals';
+
+import { TouchableOpacity,Text,  Modal,View } from 'react-native';
 
 const getLogo = ({navigation})=> (
   <TouchableOpacity style={{flexDirection:'row'}}>
@@ -23,7 +25,8 @@ const Stack = createStackNavigator();
 function NavigationHome() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Home" 
+      >
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Elements" component={ElementsScreen} />
         <Stack.Screen name="Form" component={FormScreen} />
@@ -44,6 +47,7 @@ function NavigationHome() {
           }
         />
         <Stack.Screen name="Two" component={TwoScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="Modal" component={Modals} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -89,3 +93,15 @@ function NavigationHome() {
 // }
 
 export default NavigationHome;
+
+
+
+{/* <Stack.Screen name="Modal" component={Modals} mode="modal" headerMode="none"
+          screenOptions={({props})=>{
+            return{
+              gestureEnabled: true,
+              cardOverlayEnabled: true,
+              ...TransitionPresets.ModalPresentationIOS
+            };
+          }}
+          /> */}

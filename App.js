@@ -1,3 +1,22 @@
+//redux saga
+
+// Imports: Dependencies
+import React from 'react';
+import {Provider} from 'react-redux';
+// Imports: Screens
+import CounterScreen from './src/screens/CounterScreen';
+// Imports: Redux Store
+import store from './src/saga/store';
+// React Native App
+export default function App() {
+  return (
+    // Redux: Global Store
+    <Provider store={store}>
+      <CounterScreen />
+    </Provider>
+  );
+}
+
 //social media
 
 // import React, {Component} from 'react';
@@ -7,6 +26,11 @@
 // import { createStackNavigator } from '@react-navigation/stack';
 // import Landing from './src/componets/auth/Landing';
 // import Register from './src/componets/auth/Register';
+// import {Provider} from 'react-redux';
+// import {createStore, applyMiddleware} from  'redux';
+// import rootReducer from './src/redux/reducers';
+// import thunk from 'redux-thunk';
+// const store = createStore(rootReducer, applyMiddleware(thunk))
 
 // //firebase const
 // const firebaseConfig = {
@@ -69,9 +93,12 @@
 //       );
 //     }
 //     return(
-//       <View>
-//         <Text>user is login</Text>
-//       </View>
+//       <Provider store={store}>
+//           <View>
+//                   <Text>user is login</Text>
+//           </View>
+//       </Provider>
+      
 //     );
 //   }
 // }
@@ -80,15 +107,25 @@
 
 
 
-import React from 'react';
-import 'react-native-gesture-handler';
-import NavigationHome from './src/navigation/NavigationHome';
 
-export default function App() {
-  return(
-    <NavigationHome/>
-  )
-}
+
+
+
+
+// import React from 'react';
+// import 'react-native-gesture-handler';
+// import NavigationHome from './src/navigation/NavigationHome';
+
+// export default function App() {
+//   return(
+//     <NavigationHome/>
+//   )
+// }
+
+
+
+
+
 
 // import * as React from 'react';
 // import { View, Text, TouchableOpacity } from 'react-native';

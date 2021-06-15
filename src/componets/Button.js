@@ -22,14 +22,14 @@ function Button() {
     );
 
   return (
-    <TouchableOpacity style={styles.main} onPress={createTwoButtonAlert}>
+    <TouchableOpacity style={styles.mains} onPress={createTwoButtonAlert}>
       <Text style={styles.title}>Register here</Text>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
-  main: {
+  mains: {
     // height: 50,
     // width: 100,
     backgroundColor:'red',

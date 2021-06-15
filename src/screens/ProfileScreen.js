@@ -19,7 +19,11 @@ function ProfileScreen() {
 
 const styles = StyleSheet.create({
     home: {
-      backgroundColor: '#F9F9FC',
+      // backgroundColor: '#F9F9FC',
+      // paddingTop: 10,
+      // flex: 1,
+      // alignItems: 'center',
+      backgroundColor: '#FFFDF8',
       paddingTop: 10,
       flex: 1,
       alignItems: 'center',
